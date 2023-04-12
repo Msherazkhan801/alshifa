@@ -98,7 +98,7 @@ export default function CustomizedTables() {
               <StyledTableCell >{row.date}</StyledTableCell>
               <StyledTableCell >
                 <Link to={`/patient-detail/${row.id}`} sx={{textDecoration:"none"}}><RemoveRedEyeIcon /></Link>
-                <EditIcon/>
+                {/* <EditIcon/> */}
                 <DeleteForeverIcon onClick={()=>handleDelet(row.id)}/>
               </StyledTableCell>
             </StyledTableRow>

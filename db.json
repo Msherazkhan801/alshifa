@@ -29,6 +29,27 @@
         }
       ],
       "id": 3
+    },
+    {
+      "pname": "khan",
+      "codeno": "3322",
+      "date": "2023-04-13",
+      "adress": "shewa",
+      "madicine": [
+        {
+          "medicineName": "omeprazol"
+        },
+        {
+          "medicineName": "diclo"
+        },
+        {
+          "medicineName": "injection diclo"
+        },
+        {
+          "medicineName": "clomox anti biotic"
+        }
+      ],
+      "id": 4
     }
   ]
 }
