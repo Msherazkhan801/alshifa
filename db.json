@@ -50,6 +50,26 @@
         }
       ],
       "id": 4
+    },
+    {
+      "pname": "sheraz",
+      "codeno": "2",
+      "date": "2023-04-06",
+      "adress": "sheraz",
+      "madicine": [
+        {
+          "medicineName": "ss"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "medicineName": "asd"
+        }
+      ],
+      "id": 5
     }
   ]
 }
