@@ -1,0 +1,34 @@
+{
+  "patients": [
+    {
+      "pname": "sheraz",
+      "codeno": "221",
+      "date": "2023-04-13",
+      "adress": "buneer",
+      "madicine": [
+        {
+          "medicineName": "penadol"
+        },
+        {
+          "medicineName": "disprine"
+        },
+        {
+          "medicineName": "clomox"
+        },
+        {
+          "medicineName": "COUGH"
+        },
+        {
+          "medicineName": "mouth wash"
+        },
+        {
+          "medicineName": "diclo"
+        },
+        {
+          "medicineName": "injec"
+        }
+      ],
+      "id": 3
+    }
+  ]
+}
