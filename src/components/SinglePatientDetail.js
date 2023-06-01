@@ -23,7 +23,8 @@ export default function SinglePatientDetail() {
 React.useEffect(()=>{
     loadData()
 },[])
-console.log(data);
+
+
 
   return (
     <Box sx={{ maxWidth: 600 ,paddingInline:"29%",backgroundColor:"#2aa0b9",height:"100vh"}}>
@@ -38,7 +39,7 @@ console.log(data);
       <Typography variant="h5" component="div">
         Patient Name
         <br />
-        {data?.name}
+        {data?.pname}
       </Typography>
       <Typography sx={{ mb: 1.5 }} color="text.secondary">
         Code No: {data?.codeno}
@@ -53,6 +54,7 @@ console.log(data);
           <BasicTable item={data?.madicine}/>
       </Typography>
     </CardContent>
+
   </React.Fragment>
 
       </Card>

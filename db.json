@@ -2,73 +2,89 @@
   "patients": [
     {
       "pname": "sheraz",
-      "codeno": "221",
-      "date": "2023-04-13",
+      "codeno": "22",
+      "date": "2023-06-01",
+      "adress": "sas",
+      "madicine": [
+        {
+          "medicineName": "daas",
+          "uses": 11
+        },
+        {
+          "medicineName": "dda",
+          "uses": 11
+        },
+        {
+          "medicineName": "ff",
+          "uses": 22
+        },
+        {
+          "medicineName": "sa",
+          "uses": 2
+        },
+        {
+          "medicineName": "asasd",
+          "uses": 3
+        },
+        {
+          "medicineName": "sa",
+          "uses": 3
+        },
+        {
+          "medicineName": "asd",
+          "uses": 3
+        }
+      ],
+      "id": 1
+    },
+    {
+      "pname": "sheraz",
+      "codeno": "1",
+      "date": "2023-06-01",
       "adress": "buneer",
       "madicine": [
         {
-          "medicineName": "penadol"
+          "medicineName": "penadole",
+          "uses": 2
         },
         {
-          "medicineName": "disprine"
+          "medicineName": "test",
+          "uses": 3
+        }
+      ],
+      "id": 2
+    },
+    {
+      "pname": "test",
+      "codeno": "1",
+      "date": "2023-06-01",
+      "adress": "sheraz",
+      "madicine": [
+        {
+          "medicineName": "test",
+          "uses": 2
         },
         {
-          "medicineName": "clomox"
-        },
-        {
-          "medicineName": "COUGH"
-        },
-        {
-          "medicineName": "mouth wash"
-        },
-        {
-          "medicineName": "diclo"
-        },
-        {
-          "medicineName": "injec"
+          "medicineName": "test1",
+          "uses": 1
         }
       ],
       "id": 3
     },
     {
-      "pname": "khan",
-      "codeno": "3322",
-      "date": "2023-04-13",
-      "adress": "shewa",
-      "madicine": [
-        {
-          "medicineName": "omeprazol"
-        },
-        {
-          "medicineName": "diclo"
-        },
-        {
-          "medicineName": "injection diclo"
-        },
-        {
-          "medicineName": "clomox anti biotic"
-        }
-      ],
+      "pname": "sheraz",
+      "codeno": "1",
+      "date": "2023-06-01T13:41:41.715Z",
+      "adress": "sas",
+      "madicine": "",
       "id": 4
     },
     {
-      "pname": "sheraz",
-      "codeno": "2",
-      "date": "2023-04-06",
-      "adress": "sheraz",
-      "madicine": [
-        {
-          "medicineName": "ss"
-        },
-        null,
-        null,
-        null,
-        null,
-        null,
-        {
-          "medicineName": "asd"
-        }
-      ],
+      "pname": "test",
+      "codeno": "221",
+      "date": "2023-06-22",
+      "adress": "ssss",
+      "madicine": "",
       "id": 5
     }
   ]

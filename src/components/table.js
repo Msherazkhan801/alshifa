@@ -36,45 +36,14 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 
-export default function CustomizedTables() {
-    const [rows,setRows]=useState([])
-    const [loading,setLoading]=useState(true)
-    const loadData = async () => {
-        setLoading(true);
-        try {
-          const { data } = await sendGetRequest ('/patients');
-          setRows(data)
-          setLoading(false);
-        } catch(error){
-          alert(error.message);
-        } finally {
-          setLoading(false);
-        }
-      };
-      const handleDelet =async(id)=>{
-        try {
-           await sendDeleteRequest ('/patients',`/${id}`); 
-           setRows((prevRows) => prevRows.filter((row) => row.id !== id));
-
-        } catch(error){
-          alert(error.message);
-        } finally {
-          // window.location.reload()
-
-        }
-      }
-    React.useEffect(()=>{
-        loadData()
-
-    },[])
-     
+export default function CustomizedTables({loading,handleDelet,rows}) {
   return (
     <>
     {loading ? 
       (<Box textAlign={'center'}
       sx={{display:"flex",justifyContent:"center",alignItems:"center"}}
       >
-        <CircularIndeterminate/>
+        <CircularIndeterminate />
         </Box>):(
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -98,7 +67,7 @@ export default function CustomizedTables() {
               <StyledTableCell >{row.date}</StyledTableCell>
               <StyledTableCell >
                 <Link to={`/patient-detail/${row.id}`} sx={{textDecoration:"none"}}><RemoveRedEyeIcon /></Link>
-                {/* <EditIcon/> */}
+                {/* <Link to={`/patient-edit/${row.id}`} sx={{textDecoration:"none"}}>   <EditIcon/></Link> */}
                 <DeleteForeverIcon onClick={()=>handleDelet(row.id)}/>
               </StyledTableCell>
             </StyledTableRow>

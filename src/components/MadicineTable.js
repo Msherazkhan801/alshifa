@@ -14,6 +14,7 @@ export default function BasicTable({item}) {
         <TableHead>
           <TableRow>
             <TableCell align='center'>Madicine Name </TableCell>
+            <TableCell align='center'>Uses</TableCell>
            
           </TableRow>
         </TableHead>
@@ -25,6 +26,9 @@ export default function BasicTable({item}) {
             >
               <TableCell component="th" scope="row" align='center'>
                 {row?.medicineName}
+              </TableCell>
+              <TableCell component="th" scope="row" align='center'>
+                {row?.uses}
               </TableCell>
 
             </TableRow>
