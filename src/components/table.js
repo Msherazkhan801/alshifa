@@ -39,6 +39,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 export default function CustomizedTables({loading,handleDelet,rows}) {
   return (
     <>
+    {console.log("rows ",rows)}
     {loading ? 
       (<Box textAlign={'center'}
       sx={{display:"flex",justifyContent:"center",alignItems:"center"}}
@@ -67,7 +68,7 @@ export default function CustomizedTables({loading,handleDelet,rows}) {
               <StyledTableCell >{row.date}</StyledTableCell>
               <StyledTableCell >
                 <Link to={`/patient-detail/${row.id}`} sx={{textDecoration:"none"}}><RemoveRedEyeIcon /></Link>
-                {/* <Link to={`/patient-edit/${row.id}`} sx={{textDecoration:"none"}}>   <EditIcon/></Link> */}
+                <Link to={`/patient-edit/${row.id}`} sx={{textDecoration:"none"}}>   <EditIcon/></Link>
                 <DeleteForeverIcon onClick={()=>handleDelet(row.id)}/>
               </StyledTableCell>
             </StyledTableRow>

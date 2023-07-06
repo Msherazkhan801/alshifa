@@ -23,8 +23,8 @@ export function sendCreateDataRequest(url, data) {
 
   }
   
-  export function sendUpdateDataRequest(url, id, data) {
-    return axios.put(`${BASE_URL}${url}/${id}`, data, {
+  export function sendUpdateDataRequest(url, data) {
+    return axios.put(`${BASE_URL}${url}/`, data, {
       headers: {
         'Content-Type': 'application/json'
       }

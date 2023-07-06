@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from "./components/Dashboard/dashboard";
 import CustomizedTables from "./components/table";
-// import EditPatient from "./components/EditPatient/EditPatient";
+import EditPatient from "./components/EditPatient/EditPatient";
 function App() {
   return (
     <>
@@ -30,7 +30,7 @@ function App() {
              <Route path="/detail" element={<Dashboard />} />
              <Route path="/patient-detail/:id" element={<SinglePatientDetail />} />
              <Route path="/patients" element={<Detail variant={true} />} />
-             {/* <Route path="/patient-edit/:id" element={<EditPatient />} /> */}
+             <Route path="/patient-edit/:id" element={<EditPatient />} />
           </Routes>
         </Router>
       </div>

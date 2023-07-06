@@ -1,62 +1,61 @@
 {
   "patients": [
     {
-      "pname": "Sheraz",
-      "codeno": "1223",
-      "date": "2023-06-05",
-      "adress": "Shewa",
-      "madicine": [
-        {
-          "medicineName": "penedol",
-          "uses": 2
-        },
-        {
-          "medicineName": "citrizine",
-          "uses": 3
-        },
-        {
-          "medicineName": "omeprozole",
-          "uses": 4
-        },
-        {
-          "medicineName": "calc",
-          "uses": 2
-        },
-        {
-          "medicineName": "diclo",
-          "uses": 4
-        }
-      ],
-      "id": 1
-    },
-    {
-      "pname": "test",
-      "codeno": "22",
+      "pname": "test1234",
+      "codeno": "12",
       "date": "2023-07-06",
-      "adress": "testing",
       "madicine": [
         {
           "medicineName": "test1",
           "uses": 1
         },
         {
-          "medicineName": "test2",
+          "medicineName": "test232",
           "uses": 2
         },
         {
-          "medicineName": "test3",
+          "medicineName": "test332",
           "uses": 3
         },
         {
-          "medicineName": "test4",
-          "uses": 3
+          "medicineName": "test432",
+          "uses": 4
         },
         {
           "medicineName": "test5",
+          "uses": 5
+        },
+        {
+          "medicineName": "test6",
+          "uses": 3
+        },
+        {
+          "medicineName": "test7",
           "uses": 3
         }
       ],
       "id": 2
+    },
+    {
+      "pname": "test123",
+      "codeno": "22",
+      "date": "2023-07-06",
+      "adress": "sheraz",
+      "madicine": [
+        {
+          "medicineName": "ss",
+          "uses": 11
+        },
+        {
+          "medicineName": "sas",
+          "uses": 22
+        },
+        {
+          "medicineName": "sa",
+          "uses": 32
+        }
+      ],
+      "id": 3
     }
   ]
 }

@@ -1,5 +1,5 @@
     import React, { useEffect } from 'react';
-    import { useParams } from 'react-router-dom';
+    import { useNavigate, useParams } from 'react-router-dom';
     import Box from '@mui/material/Box';
     import Button from '@mui/material/Button';
     import Typography from '@mui/material/Typography';
@@ -23,21 +23,21 @@ import { sendGetRequest, sendUpdateDataRequest } from '../../utils/api';
     
     const EditPatient = () => {
         const { id } = useParams();
+        const navigate=useNavigate()
         const [data, setData] = React.useState({
           pname: '',
           codeno: '',
           date: '',
           address: '',
-          medicine: [],
+          madicine:[]
         });
       
         useEffect(() => {
           if (id) {
-            // If id exists, fetch the patient data and populate the form
             sendGetRequest(`/patients/${id}`)
               .then((response) => {
-                const { pname, codeno, date, address, medicine } = response.data;
-                setData({ pname, codeno, date, address, medicine });
+                const { pname, codeno, date, address, madicine } = response.data;
+                setData({ pname, codeno, date, address, madicine });
               })
               .catch((error) => {
                 toast.error('Failed to fetch patient data');
@@ -48,10 +48,36 @@ import { sendGetRequest, sendUpdateDataRequest } from '../../utils/api';
       
         const handleChange = (e) => {
           const { name, value } = e.target;
-          setData({
-            ...data,
-            [name]: value,
-          });
+          if (name.startsWith("medicineName")) {
+            const index = Number(name.slice(-1)) - 1;
+            const newMedicine = [...data.madicine];
+            newMedicine[index] = {
+              ...newMedicine[index],
+              medicineName: value,
+            };
+        
+            setData({
+              ...data,
+              madicine: newMedicine,
+            });
+          } else if (name.startsWith("uses")) {
+            const index = Number(name.slice(4)) - 1;
+            const newMedicine = [...data.madicine];
+            newMedicine[index] = {
+              ...newMedicine[index],
+              uses: Number(value),
+            };
+        
+            setData({
+              ...data,
+              madicine: newMedicine,
+            });
+          } else {
+            setData({
+              ...data,
+              [name]: value,
+            });
+          }
         };
       
         const validation = () => {
@@ -64,13 +90,14 @@ import { sendGetRequest, sendUpdateDataRequest } from '../../utils/api';
       
         const handleSubmit = (e) => {
           e.preventDefault();
-          if (validation()) {
+          // if (validation()) {
             if (id) {
-              // If id exists, it means we are updating an existing patient
+              console.log('id',id);
               sendUpdateDataRequest(`/patients/${id}`, data)
                 .then(() => {
                   toast.success('Patient updated successfully');
-                  window.location.reload();
+                  navigate('/detail')
+                  // window.location.reload();
                 })
                 .catch((error) => {
                   toast.error('Failed to update patient');
@@ -79,7 +106,7 @@ import { sendGetRequest, sendUpdateDataRequest } from '../../utils/api';
             } else {
               toast.error('Please fill in all fields');
             }
-          }
+          // }
         };
       
   return (
@@ -88,7 +115,7 @@ import { sendGetRequest, sendUpdateDataRequest } from '../../utils/api';
       <Box
         sx={{ overflow: "scroll" }}
       >
-        <Box sx={style}>
+       <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2" textAlign={'center'}>
             Enter Patient Detail
           </Typography>
@@ -98,6 +125,36 @@ import { sendGetRequest, sendUpdateDataRequest } from '../../utils/api';
             <TextField placeholder='Date' onChange={handleChange} name='date' value={data.date} type='date' sx={{ width: "40%", marginInline: "20px", paddingTop: "20px" }} required />
             <TextField placeholder='Address' onChange={handleChange} name='adress' value={data.adress} type='text' sx={{ width: "40%", marginInline: "20px", paddingTop: "20px" }} required />
             <hr style={{ marginTop: "20px", width: "85%", marginInline: "20px" }} />
+            <Typography variant='h5' fontSize={18} sx={{ marginTop: "20px", marginInline: "20px" }}><u>Medicine Details</u></Typography>
+            <Box display={'flex'}>
+            <TextField placeholder=' Madicine Name' onChange={handleChange} name='medicineName1' value={data.madicine[0]?.medicineName} type='text' sx={{ width: "80%", marginInline: "20px", paddingTop: "20px" }} />
+            <TextField placeholder='Use' onChange={handleChange} name='uses1' value={data.madicine[0]?.uses} type='text' sx={{ width: "10%", marginInline: "20px", paddingTop: "20px" }} />
+            </Box>
+            <Box display={'flex'}>
+            <TextField placeholder=' Madicine Name' onChange={handleChange} name='medicineName2' value={data.madicine[1]?.medicineName} type='text' sx={{ width: "80%", marginInline: "20px", paddingTop: "20px" }} />
+            <TextField placeholder='Use' onChange={handleChange} name='uses2' value={data.madicine[1]?.uses} type='text' sx={{ width: "10%", marginInline: "20px", paddingTop: "20px" }} />
+            </Box>
+            <Box display={'flex'}>
+            <TextField placeholder=' Madicine Name' onChange={handleChange} name='medicineName3' value={data.madicine[2]?.medicineName} type='text' sx={{ width: "80%", marginInline: "20px", paddingTop: "20px" }} />
+            <TextField placeholder='Use' onChange={handleChange} name='uses3' value={data.madicine[2]?.uses} type='text' sx={{ width: "10%", marginInline: "20px", paddingTop: "20px" }} />
+            </Box>
+            <Box display={'flex'}>
+            <TextField placeholder='Madicine Name' onChange={handleChange} name='medicineName4' value={data.madicine[3]?.medicineName} type='text' sx={{ width: "80%", marginInline: "20px", paddingTop: "20px" }} />
+            <TextField placeholder='Use' onChange={handleChange} name='uses4' value={data.madicine[3]?.uses} type='text' sx={{ width: "10%", marginInline: "20px", paddingTop: "20px" }} />
+            </Box>
+            <Box display={'flex'}>
+            <TextField placeholder='Madicine Name' onChange={handleChange} name='medicineName5' value={data.madicine[4]?.medicineName} type='text' sx={{ width: "80%", marginInline: "20px", paddingTop: "20px" }} />
+            <TextField placeholder='Use' onChange={handleChange} name='uses5' value={data.madicine[4]?.uses} type='text' sx={{ width: "10%", marginInline: "20px", paddingTop: "20px" }} />
+            </Box>
+            <Box display={'flex'}>
+            <TextField placeholder='Madicine Name' onChange={handleChange} name='medicineName6' value={data.madicine[5]?.medicineName} type='text' sx={{ width: "80%", marginInline: "20px", paddingTop: "20px" }} />
+            <TextField placeholder='Use' onChange={handleChange} name='uses6' value={data.madicine[5]?.uses} type='text' sx={{ width: "10%", marginInline: "20px", paddingTop: "20px" }} />
+            </Box>
+            <Box display={'flex'}>
+            <TextField placeholder=' Madicine Name' onChange={handleChange} name='medicineName7' value={data.madicine[6]?.medicineName} type='text' sx={{ width: "80%", marginInline: "20px", paddingTop: "20px" }} />
+            <TextField placeholder='Use' onChange={handleChange} name='uses7' value={data.madicine[6]?.uses} type='text' sx={{ width: "10%", marginInline: "20px", paddingTop: "20px" }} />
+            </Box>
+            <br />
             <Box sx={{ width: "85%", marginTop: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
               <Button variant="contained" sx={{ width: "30%" }} onClick={handleSubmit}>ADD</Button>
             </Box>

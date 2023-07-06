@@ -49,8 +49,8 @@ const Detail = ({variant}) => {
   return (
     <Box height={'100vh'} bgcolor={'#e9e9e9'} display='flex' justifyContent={'center'}>
       <Box mt={variant ? '50px':'0px'}>
-    {!variant &&    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-          {/* <Typography variant='h1' textAlign={'center'} fontSize={50} mb={'10px'}> Alshifa Patients Details</Typography> */}
+    {!variant &&    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center",  }}>
+          <Typography variant='h1' textAlign={'center'} fontSize={50} mb={'10px'}> Patients Details</Typography><br/>
           <BasicModal rows={rows} />
           <SearchBox search={search} setSearch={setSearch} />
         </Box>}
