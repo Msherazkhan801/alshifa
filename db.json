@@ -1,91 +1,62 @@
 {
   "patients": [
     {
-      "pname": "sheraz",
-      "codeno": "22",
-      "date": "2023-06-01",
-      "adress": "sas",
+      "pname": "Sheraz",
+      "codeno": "1223",
+      "date": "2023-06-05",
+      "adress": "Shewa",
       "madicine": [
         {
-          "medicineName": "daas",
-          "uses": 11
-        },
-        {
-          "medicineName": "dda",
-          "uses": 11
-        },
-        {
-          "medicineName": "ff",
-          "uses": 22
-        },
-        {
-          "medicineName": "sa",
+          "medicineName": "penedol",
           "uses": 2
         },
         {
-          "medicineName": "asasd",
+          "medicineName": "citrizine",
           "uses": 3
         },
         {
-          "medicineName": "sa",
-          "uses": 3
+          "medicineName": "omeprozole",
+          "uses": 4
         },
         {
-          "medicineName": "asd",
-          "uses": 3
+          "medicineName": "calc",
+          "uses": 2
+        },
+        {
+          "medicineName": "diclo",
+          "uses": 4
         }
       ],
       "id": 1
     },
     {
-      "pname": "sheraz",
-      "codeno": "1",
-      "date": "2023-06-01",
-      "adress": "buneer",
+      "pname": "test",
+      "codeno": "22",
+      "date": "2023-07-06",
+      "adress": "testing",
       "madicine": [
         {
-          "medicineName": "penadole",
+          "medicineName": "test1",
+          "uses": 1
+        },
+        {
+          "medicineName": "test2",
           "uses": 2
         },
         {
-          "medicineName": "test",
+          "medicineName": "test3",
+          "uses": 3
+        },
+        {
+          "medicineName": "test4",
+          "uses": 3
+        },
+        {
+          "medicineName": "test5",
           "uses": 3
         }
       ],
       "id": 2
-    },
-    {
-      "pname": "test",
-      "codeno": "1",
-      "date": "2023-06-01",
-      "adress": "sheraz",
-      "madicine": [
-        {
-          "medicineName": "test",
-          "uses": 2
-        },
-        {
-          "medicineName": "test1",
-          "uses": 1
-        }
-      ],
-      "id": 3
-    },
-    {
-      "pname": "sheraz",
-      "codeno": "1",
-      "date": "2023-06-01T13:41:41.715Z",
-      "adress": "sas",
-      "madicine": "",
-      "id": 4
-    },
-    {
-      "pname": "test",
-      "codeno": "221",
-      "date": "2023-06-22",
-      "adress": "ssss",
-      "madicine": "",
-      "id": 5
     }
   ]
 }

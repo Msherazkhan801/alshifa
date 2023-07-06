@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:3000";
 
 export function sendGetRequest(url,) {
     return axios.get(`${BASE_URL}${url}`);

@@ -46,7 +46,7 @@ export default function CustomizedTables({loading,handleDelet,rows}) {
         <CircularIndeterminate />
         </Box>):(
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <Table sx={{ minWidth: 900 }} aria-label="customized table">
         <TableHead>
           <TableRow>
            {['ID','Name','codeNo','Date','Action'].map((heading,i)=>{
