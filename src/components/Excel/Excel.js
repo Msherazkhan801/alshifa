@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import React from 'react'
 import { saveAs } from 'file-saver';
 import * as XLSX from 'xlsx';
+import BrowserUpdatedIcon from '@mui/icons-material/BrowserUpdated';
 
 const Excel = ({data}) => {
     const downloadExcel = () => {
@@ -23,7 +24,7 @@ const Excel = ({data}) => {
         saveAs(excelData, 'data.xlsx'); // Change the file name as desired
       };
   return (
-    <Button onClick={downloadExcel}>Download</Button>
+    <Button onClick={downloadExcel}><BrowserUpdatedIcon/></Button>
   )
 }
 

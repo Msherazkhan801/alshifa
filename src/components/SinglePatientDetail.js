@@ -27,7 +27,7 @@ React.useEffect(()=>{
 
 
   return (
-    <Box sx={{ maxWidth: 600 ,paddingInline:"29%",backgroundColor:"#2aa0b9",height:"100vh"}}>
+    <Box sx={{ maxWidth: 600 ,paddingInline:"29%",backgroundColor:"#2aa0b9",height:"100vh", overflow:"scroll"}}>
       <Typography variant='h2' fontSize={36} mb={'20px'}  sx={{paddingTop:"20px",color:"white"}}> <u>Patient Detail</u></Typography>
       <Card variant="outlined">
       <React.Fragment>
@@ -36,21 +36,32 @@ React.useEffect(()=>{
       <ArrowBackIcon/>
       </span>
       </Link>
+      <Box display={'flex'} justifyContent={'center'} gap={'20px'} >
       <Typography variant="h5" component="div">
-        Patient Name
-        <br />
+        Patient Name: 
+      </Typography>
+      <Typography variant="h5" component="div">
         {data?.pname}
       </Typography>
+      </Box>
+      <Box display={'flex'} justifyContent={'center'} gap={'20px'} >
+      <Typography sx={{ mb: 1.5 ,ml:3}} color="text.secondary">
+        Code No: 
+      </Typography>
       <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        Code No: {data?.codeno}
+        {data?.codeno}
+      </Typography>
+      </Box>
+      <Box display={'flex'} justifyContent={'center'} gap={'20px'} >
+      <Typography textAlign={'center'} sx={{ ml:'112px'}}>
+        Date:
       </Typography>
       <Typography variant="body2" textAlign={'center'}>
-        Date
-        <br />
        {data?.date}
       </Typography>
+      </Box>
       <Typography variant="body2" textAlign={'center'}>
-        <span style={{fontSize:"26px",fontFamily:"cursive "}}>Madicine </span>
+        <span style={{fontSize:"26px",fontFamily:"cursive "}}>Medicine </span>
           <BasicTable item={data?.madicine}/>
       </Typography>
     </CardContent>

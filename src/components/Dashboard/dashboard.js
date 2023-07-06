@@ -19,6 +19,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems } from '../sidebar/Sidebar';
 import Detail from '../Detail';
+import logo from '../../assets/images/logo.png';
 
 
 
@@ -100,6 +101,7 @@ export default function Dashboard() {
             >
               <MenuIcon />
             </IconButton>
+            <img src={logo} alt='pic' width={'50px'}/>
             <Typography
               component="h1"
               variant="h6"
@@ -157,11 +159,11 @@ export default function Dashboard() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    width:'100%'
+                    width:'100%',
+                    height:'auto'
                   }}
                 >
                 <Detail/>
-                  
                 </Paper>
               </Grid>
             </Grid>

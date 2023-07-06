@@ -26,7 +26,6 @@ function App() {
         <Router>
           <Routes>
              <Route path="/" element={<Home />} />
-             {/* <Route path="/detail" element={<Detail />} /> */}
              <Route path="/detail" element={<Dashboard />} />
              <Route path="/patient-detail/:id" element={<SinglePatientDetail />} />
              <Route path="/patients" element={<Detail variant={true} />} />

@@ -37,25 +37,166 @@
       "id": 2
     },
     {
-      "pname": "test123",
-      "codeno": "22",
+      "pname": "sherazkhan",
+      "codeno": "213",
       "date": "2023-07-06",
-      "adress": "sheraz",
+      "adress": "shewa ",
       "madicine": [
         {
-          "medicineName": "ss",
-          "uses": 11
+          "medicineName": "penodol",
+          "uses": 2
         },
         {
-          "medicineName": "sas",
-          "uses": 22
+          "medicineName": "augmentine",
+          "uses": 3
         },
         {
-          "medicineName": "sa",
-          "uses": 32
+          "medicineName": "flygel",
+          "uses": 2
+        },
+        {
+          "medicineName": "disprine",
+          "uses": 2
+        },
+        {
+          "medicineName": "omnidol",
+          "uses": 2
+        },
+        {
+          "medicineName": "test",
+          "uses": 1
+        },
+        {
+          "medicineName": "test",
+          "uses": 1
         }
       ],
       "id": 3
+    },
+    {
+      "pname": "abc",
+      "codeno": "656",
+      "date": "2023-07-06",
+      "adress": "shewa",
+      "madicine": [
+        {
+          "medicineName": "abc",
+          "uses": 1
+        },
+        {
+          "medicineName": "abc1",
+          "uses": 2
+        },
+        {
+          "medicineName": "abc2",
+          "uses": 3
+        },
+        {
+          "medicineName": "abc3",
+          "uses": 4
+        },
+        {
+          "medicineName": "abc4",
+          "uses": 5
+        },
+        {
+          "medicineName": "abc5",
+          "uses": 6
+        },
+        {
+          "medicineName": "abc6",
+          "uses": 7
+        }
+      ],
+      "id": 4
+    },
+    {
+      "pname": "test11",
+      "codeno": "11",
+      "date": "2023-07-07",
+      "adress": "sas",
+      "madicine": [
+        {
+          "medicineName": "ç√",
+          "uses": 1
+        },
+        {
+          "medicineName": "test11",
+          "uses": 2
+        },
+        {
+          "medicineName": "test11",
+          "uses": 3
+        }
+      ],
+      "id": 5
+    },
+    {
+      "pname": "sheraz",
+      "codeno": "32",
+      "date": "2023-07-07",
+      "adress": "shewa",
+      "madicine": [
+        {
+          "medicineName": "daas",
+          "uses": 2
+        },
+        {
+          "medicineName": "dda",
+          "uses": 2
+        },
+        {
+          "medicineName": "sxfd",
+          "uses": 3
+        }
+      ],
+      "id": 6
+    },
+    {
+      "pname": "e",
+      "codeno": "1",
+      "date": "2023-07-06",
+      "adress": "sas",
+      "madicine": [
+        {
+          "medicineName": "as",
+          "uses": 2
+        },
+        {
+          "medicineName": "dd",
+          "uses": 1
+        },
+        {
+          "uses": 1,
+          "medicineName": "sxfd"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "pname": "egfd",
+      "codeno": "54",
+      "date": "2023-07-07",
+      "adress": "hvb",
+      "madicine": [
+        {
+          "medicineName": "ss",
+          "uses": 3
+        },
+        {
+          "medicineName": "dd",
+          "uses": 4
+        },
+        {
+          "medicineName": "sxfd",
+          "uses": 5
+        },
+        {
+          "uses": 5,
+          "medicineName": "ggs"
+        }
+      ],
+      "id": 8
     }
   ]
 }
