@@ -25,7 +25,7 @@ export default function OutlinedCard({loading,handleDelet,rows}) {
      {rows.map((data)=>{
         return(
             <Box sx={{ minWidth: 275 ,maxWidth:275}} key={data.id}>
-            <Card variant="outlined" sx={{backgroundColor:'#6288c4',color:'#fff'}} >
+            <Card variant="outlined" sx={{backgroundColor:'#fff' ,boxShadow: '0 2px 5px rgba(0, 0, 0, 0.25)'}} >
             <React.Fragment>
           <CardContent>
             <Box sx={{borderRadius:'50px',border:'1px solid white',margin:'0 auto',width:'20px'}}>{data.id}</Box>

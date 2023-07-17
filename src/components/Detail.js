@@ -7,10 +7,12 @@ import { toast } from 'react-toastify'
 import Excel from './Excel/Excel'
 import SearchBox from './SearchBox/SearchBox'
 import OutlinedCard from './card/Card'
+import Switchbtn from './switchbtn/Switchbtn'
 const Detail = ({variant}) => {
   const [rows, setRows] = useState([])
   const [search, setSearch] = useState('')
 
+  const [isCard, setIsCard] = useState(true)
   const [loading, setLoading] = useState(true)
   const [dataLimit, setDataLimit] = useState(3)
   const loadData = async () => {
@@ -58,17 +60,18 @@ const Detail = ({variant}) => {
           <Typography variant='h1' textAlign={'center'} fontSize={50} mb={'10px'}> Patients Details</Typography><br/>
           <BasicModal rows={rows} />
           <SearchBox search={search} setSearch={setSearch} />
+          <Switchbtn isTable={isCard} setIsTable={setIsCard}/>
         </Box>}
-        <OutlinedCard 
+     {isCard ? (  <OutlinedCard 
           loading={loading}
           handleDelet={(id) => handleDelet(id)}
           rows={filtered.slice(0,dataLimit)}
-        />
-        {/* <CustomizedTables
+        />):(
+        <CustomizedTables
           loading={loading}
           handleDelet={(id) => handleDelet(id)}
           rows={filtered}
-        /> */}
+        /> )}
         {rows.length < dataLimit  ? 
       <Button onClick={()=>setDataLimit(dataLimit-3)}>{'Show Less'}</Button>:
       <Button onClick={()=>setDataLimit(dataLimit+3)}>{'Show More'}</Button>}

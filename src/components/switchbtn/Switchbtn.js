@@ -8,7 +8,7 @@ const Switchbtn = ({ isTable, setIsTable }) => {
 
   return (
     <div className="switch-container">
-      <input type="checkbox" id="switch" checked={isTable} onChange={handleSwitchToggle} />
+      <input type="checkbox" id="switch" checked={isTable} onChange={handleSwitchToggle}  />
       <label htmlFor="switch" ></label>
     </div>
   );

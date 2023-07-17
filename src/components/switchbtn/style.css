@@ -1,12 +1,16 @@
-
-input{
+.switch-container{
+	margin-left: 10px;
+	margin-bottom: 8px;
+}
+#switch{
 	display: block;
 	opacity: 0;
+	margin-left: 20px;
 }
 
 label{	position: relative;
 	width: 60px;
-	height: 32px;
+	height: 29px;
 	display: inline-block;
 	background: #666666;
 	border-radius: 30px;
@@ -21,21 +25,29 @@ label:after
 	{content: "";
 	position: absolute;
 	left: 2px;
-	top: 2px;
-	width: 30px;
-	height: 29px;
+	top: 1px !important;
+	width: 29px;
+	height: 23px;
 	background: #FFF;
 	border-radius: 50%;
 	box-shadow: 1px 3px 6px #666666;}
 
-input:checked + label
+#switch:checked + label
 {	background: #3496ff;}
 
-input:checked + label:after
+#switch:checked + label:after
 	{left: auto;
 	right: 2px;
 }
 	
-
-
-	
+label::after{	
+	content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 28px;
+    height: 26px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 1px 3px 6px #666666;
+}
