@@ -40,7 +40,7 @@
       "pname": "sherazkhan",
       "codeno": "213",
       "date": "2023-07-06",
-      "adress": "shewa ",
+      "address": "shewa",
       "madicine": [
         {
           "medicineName": "penodol",
@@ -63,11 +63,11 @@
           "uses": 2
         },
         {
-          "medicineName": "test",
+          "medicineName": "test123",
           "uses": 1
         },
         {
-          "medicineName": "test",
+          "medicineName": "mytest",
           "uses": 1
         }
       ],

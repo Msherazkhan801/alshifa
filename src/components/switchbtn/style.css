@@ -1,0 +1,41 @@
+
+input{
+	display: block;
+	opacity: 0;
+}
+
+label{	position: relative;
+	width: 60px;
+	height: 32px;
+	display: inline-block;
+	background: #666666;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+	
+	
+label:after 
+	{content: "";
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	width: 30px;
+	height: 29px;
+	background: #FFF;
+	border-radius: 50%;
+	box-shadow: 1px 3px 6px #666666;}
+
+input:checked + label
+{	background: #3496ff;}
+
+input:checked + label:after
+	{left: auto;
+	right: 2px;
+}
+	
+
+
+	
