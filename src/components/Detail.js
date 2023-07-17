@@ -8,6 +8,8 @@ import Excel from './Excel/Excel'
 import SearchBox from './SearchBox/SearchBox'
 import OutlinedCard from './card/Card'
 import Switchbtn from './switchbtn/Switchbtn'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Link } from 'react-router-dom'
 const Detail = ({variant}) => {
   const [rows, setRows] = useState([])
   const [search, setSearch] = useState('')
@@ -53,11 +55,14 @@ const Detail = ({variant}) => {
   return (
     <Box  bgcolor={'#e9e9e9'} display='flex' justifyContent={'center'}>
       <Box mt={variant ? '50px':'0px'}>
+       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center",  }}>
+        {variant ? <Link to='/detail'><ArrowBackIcon /></Link>:''}
+          <Typography variant='h1' textAlign={'center'} fontSize={50} mb={'10px'} ml={variant ? '':'250px'}> Patients Details</Typography><br/>
+        </Box>
     {   <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center",  }}>
         <Box sx={{border:'2px solid #fff',borderRadius:'50px',marginTop:'-10px'}}>
         <Excel data={rows} />
         </Box>
-          <Typography variant='h1' textAlign={'center'} fontSize={50} mb={'10px'}> Patients Details</Typography><br/>
           <BasicModal rows={rows} />
           <SearchBox search={search} setSearch={setSearch} />
           <Switchbtn isTable={isCard} setIsTable={setIsCard}/>
